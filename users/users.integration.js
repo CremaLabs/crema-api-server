@@ -6,7 +6,7 @@ const app = require('../');
 const server = supertest(app);
 
 describe('Users', function () {
-  let url = '/v1/users/currentuser';
+  const url = '/v1/users/currentuser';
 
   describe('GET /currentuser', function () {
 
