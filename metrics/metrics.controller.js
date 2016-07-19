@@ -16,6 +16,6 @@ var addRating = function(req, res) {
     createdAt: new Date(),
     updatedAt: new Date()
   })
+  .then(() => { res.status(200).end(); })
   .catch((err) => { console.log(err); });
 };
-
