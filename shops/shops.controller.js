@@ -10,18 +10,18 @@ module.exports = {
 
 // takes in coordinates of map visible to user and return
 // all coffee shops in that area
-var getShops = function(sw, ne) {
-  var minLat = sw.lat;
-  var maxLat = ne.lat;
-  var minLong = sw.lng;
-  var maxLong = ne.lng;
+var getShops = function(req, res) {
+  var minLat = req.query.sw.lat;
+  var maxLat = req.query.ne.lat;
+  var minLong = req.query.sw.lng;
+  var maxLong = req.query.ne.lng;
 
   sequelize.query(`SELECT *
               FROM shops, metrics
               WHERE shops.id = metrics."shopID" AND shops.lat <= ${maxLat} AND shops.lat >= ${minLat} 
               AND shops.long <= ${maxLong} AND shops.long >= ${minLong}`)
-  .then((res) => {
-    return res;
+  .then((rows) => {
+    res.send(rows);
   })
   .catch((err) => console.log(err) );
 };
