@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../config/sequelize');
-const Shop = require('../shops/shops.model.js');
-const User = require('../users/user.model.js');
+const Shop = require('../shops/shops.model');
+const User = require('../users/user.model');
 
 
 const Metric = sequelize.define('metric', {

@@ -1,4 +1,4 @@
-const Shop = require('./shops.model.js');
+const Shop = require('./shops.model');
 const Metric = require('../metrics/metrics.model');
 const sequelize = require('../config/sequelize');
 
