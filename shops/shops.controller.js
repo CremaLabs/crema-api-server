@@ -1,5 +1,5 @@
 const Shop = require('./shops.model.js');
-const Metric = require('../metrics/metrics.model.js');
+const Metric = require('../metrics/metrics.model');
 const sequelize = require('../config/sequelize');
 
 
