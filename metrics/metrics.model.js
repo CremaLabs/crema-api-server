@@ -1,10 +1,10 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../config/sequelize');
-var Shop = require('../shops/shops.model.js');
-var User = require('../users/user.model.js');
+const Shop = require('../shops/shops.model.js');
+const User = require('../users/user.model.js');
 
 
-var Metric = sequelize.define('metric', {
+const Metric = sequelize.define('metric', {
   availRating: { type: Sequelize.FLOAT },
   userMessage: { type: Sequelize.STRING },
   userID: { type: Sequelize.INTEGER },
