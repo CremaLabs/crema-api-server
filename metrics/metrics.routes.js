@@ -1,4 +1,4 @@
-const MetricRouter = require('express').router();
+const MetricRouter = require('express').Router();
 const MetricCtrl = require('./metrics.controller');
 
 MetricRouter.route('/addRating')

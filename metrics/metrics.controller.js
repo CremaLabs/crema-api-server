@@ -6,7 +6,7 @@ module.exports = {
 
 
 // write a POSTed rating to the DB
-var addRating = function(req, res) {
+function addRating(req, res) {
 
   Metric.create({
     availRating: req.body.rating,
@@ -18,4 +18,4 @@ var addRating = function(req, res) {
   })
   .then(() => { res.status(200).end(); })
   .catch((err) => { console.log(err); });
-};
+}
